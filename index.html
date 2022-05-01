@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src\css\style.css">
+    <script src="node_modules\jquery\dist\jquery.min.js"></script>
+    <title>MeatOn | Главная</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img class="logo__img" src="src\img\logo.svg">
+        </div>
+        <nav class="menu">
+            <div class="menu__inner push">
+                <a href="index.html" class="menu__link">Главная</a>
+            </div>
+            <div class="menu__inner push">
+                <a href="pages/menu/index.html" class="menu__link">Меню</a>
+            </div>
+            <div class="menu__inner push">
+                <a href="pages/about/index.html" class="menu__link">О нас</a>
+            </div>
+            <div class="menu__inner profile">
+                <a href="pages/profile/index.html" class="menu__link">
+                    <img class="icons" src="src\img\icons\profile.svg">
+                </a>
+            </div>
+            <div class="menu__inner cart">
+                <a href="pages/cart/index.html" class="menu__link">
+                    <img class="icons" src="src\img\icons\cart.svg">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="intro">
+        <div class="carusel">
+            <section class="carusel__item" id="carusel__item1">
+                <h3 class="carusel__header">мы открылись</h3>
+                <span class="carusel__text">гриль - напитки - доставка в любую точку города</span>
+            </section>
+            <section class="carusel__item" id="carusel__item2">
+                <h3 class="carusel__header">праздник сов</h3>
+                <span class="carusel__text">скидка 15% на заказы с 23:59 до 3:59</span>
+            </section>
+            <section class="carusel__item" id="carusel__item3">
+                <h3 class="carusel__header">жаворонки, ликуем!</h3>
+                <span class="carusel__text">скидка 20% на заказы с 4:00 до 8:00</span>
+            </section>
+            <section class="carusel__item" id="carusel__item4">
+                <h3 class="carusel__header">первым приготовиться!</h3>
+                <span class="carusel__text">получи 200 рублей на первый заказ</span>
+            </section>
+        </div>
+        <div class="controls"></div>
+    </main>
+    
+    <script src="src\js\carusel.js"></script>
+</body>
+</html>
