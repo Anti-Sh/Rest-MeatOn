@@ -85,6 +85,8 @@ body{
 /*section*/
 .intro{
     background: url('../img/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
     width: 100%;
     max-width: 1440px;
     height: 595px;
