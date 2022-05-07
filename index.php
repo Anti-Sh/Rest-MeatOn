@@ -8,33 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>MeatOn | Главная</title>
 </head>
-<body>f
-    <header class="header">
-        <div class="logo">
-            <img class="logo__img" src="src/img/logo.svg">
-        </div>
-        <nav class="menu">
-            <div class="menu__inner push">
-                <a href="index.html" class="menu__link">Главная</a>
-            </div>
-            <div class="menu__inner push">
-                <a href="pages/menu/index.html" class="menu__link">Меню</a>
-            </div>
-            <div class="menu__inner push">
-                <a href="pages/about/index.html" class="menu__link">О нас</a>
-            </div>
-            <div class="menu__inner profile">
-                <a href="pages/profile/index.html" class="menu__link">
-                    <img class="icons" src="src/img/icons/profile.svg">
-                </a>
-            </div>
-            <div class="menu__inner cart">
-                <a href="pages/cart/index.html" class="menu__link">
-                    <img class="icons" src="src/img/icons/cart.svg">
-                </a>
-            </div>
-        </nav>
-    </header>
+<body>
+    <?php require "page_modules/header.php"; ?>
 
     <main class="intro">
         <div class="carusel">

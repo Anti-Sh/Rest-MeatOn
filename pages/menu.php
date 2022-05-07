@@ -9,32 +9,8 @@
     <title>MeatOn | Меню</title>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <img class="logo__img" src="../../src/img/logo.svg">
-        </div>
-        <nav class="menu">
-            <div class="menu__inner push">
-                <a href="../../index.html" class="menu__link">Главная</a>
-            </div>
-            <div class="menu__inner push">
-                <a href="../menu/index.html" class="menu__link">Меню</a>
-            </div>
-            <div class="menu__inner push">
-                <a href="../about/index.html" class="menu__link">О нас</a>
-            </div>
-            <div class="menu__inner profile">
-                <a href="../profile/index.html" class="menu__link">
-                    <img class="icons" src="../../src/img/icons/profile.svg">
-                </a>
-            </div>
-            <div class="menu__inner cart">
-                <a href="../cart/index.html" class="menu__link">
-                    <img class="icons" src="../../src/img/icons/cart.svg">
-                </a>
-            </div>
-        </nav>
-    </header>
+    <?php require "../page_modules/header.php"; ?>
+    
     <main class="pmenu">
         <h3 class="main__header">Мясные блюда</h3>
         <section class="pmenu__section">
