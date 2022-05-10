@@ -208,7 +208,7 @@ body{
     text-align: right;
 }
 .variant__weight::after{
-    content: " гр.";
+    content: " гр";
 }
 .variant__cost{
     text-align: right;
@@ -224,4 +224,10 @@ body{
 .tr__name{
     text-align: center;
     font-weight: 600;
+}
+
+/*auth-reg page*/
+.auth,
+.reg{
+    margin: 0 auto;
 }
