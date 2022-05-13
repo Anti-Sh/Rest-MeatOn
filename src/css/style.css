@@ -229,25 +229,65 @@ body{
 /*auth-reg page*/
 .authpage{
     margin-top: 20px;
-    vertical-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    width: 100%;
+    max-width: 1440px;
+    margin: 40px auto 0;
+    height: 796px;
+    background: url("../img/authback.png") no-repeat;
+    box-shadow: 0 0 10px black;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+.formpart{
+    width: 50%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    font-family: 'Montserrat', sans-serif;
 }
 .auth__header{
     color: #262626;
     background-color: #e1b838;
     text-align: center;
     margin: 0;
+    width: auto;
     padding: 30px 50px;
     font-size: 30px;
 }
+.notifivationpart{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.notification{
+    background-color: #262626;
+    border: 2px solid #e14338;
+    margin: 0 0 0 15px;
+    width: 350px;
+}
+.notification__header{
+    background-color: #e14338;
+    padding: 10px;
+    margin: 0;
+}
+.notification__text{
+    color: #fff;
+    margin: 5px;
+    vertical-align: middle;
+    text-align: justify;
+}
 .auth,
 .reg{
-    margin: 0 auto;
     border: 2px solid #e1b838;
+    background-color: #262626;
 }
 .label{
     color: #e1b838;
@@ -264,6 +304,9 @@ body{
     font-size: 18px;
     text-align: center;
     outline:none;
+}
+.badinput{
+    border-bottom: 2px solid #e14338;
 }
 .auth__btn{
     background-color: #e1b838;
