@@ -12,43 +12,51 @@
 <body>
     <?php require "../page_modules/header.php"; ?>
     <main class="authpage">
-        <div class="auth">
-            <h2 class="auth__header">Авторизация</h2>
-            <form action="" method="post">
-                <h4 class="label">Е-mail</h4>
-                <input class="textinput" type="email" name="mail">
-                <h4 class="label">Пароль</h4>
-                <input class="textinput" type="password" name="password"><br>
-                <div class="buttons">
-                    <input class="auth__btn" type="submit" value="Войти">
-                    <button type="button" class="auth__btn switch">Регистрация</button>
-                </div>
-            </form>
+        <div class="formpart">
+            <div class="auth">
+                <h2 class="auth__header">Авторизация</h2>
+                <form action="" method="post">
+                    <h4 class="label">Е-mail</h4>
+                    <input class="textinput" type="email" name="mail1">
+                    <h4 class="label">Пароль</h4>
+                    <input class="textinput" type="password" name="password1"><br>
+                    <div class="buttons">
+                        <input class="auth__btn" type="submit" value="Войти">
+                        <button type="button" class="auth__btn switch">Регистрация</button>
+                    </div>
+                </form>
+            </div>
+            <div class="reg">
+                <h2 class="auth__header">Регистрация</h2>
+                <form action="" method="post">
+                    <h4 class="label">Е-mail</h4>
+                    <input class="textinput" type="email" name="mail">
+                    <h4 class="label">Номер телефона</h4>
+                    <input class="textinput tel" type="text" name="tel">
+                    <h4 class="label">Пароль</h4>
+                    <input class="textinput" type="password" name="password">
+                    <h4 class="label">Подтверждение пароля</h4>
+                    <input class="textinput" type="password" name="password_confirm">
+                    <h4 class="label">Фамилия</h4>
+                    <input class="textinput" type="text" name="last_name">
+                    <h4 class="label">Имя</h4>
+                    <input class="textinput" type="text" name="first_name">
+                    <h4 class="label">Адрес</h4>
+                    <input class="textinput" type="text" name="address">
+                    
+                    <br>
+                    <div class="buttons">
+                        <input class="auth__btn" type="submit" value="Зарегистрироваться">
+                        <button type="button" class="auth__btn switch">Вход</button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="reg">
-            <h2 class="auth__header">Регистрация</h2>
-            <form action="" method="post">
-                <h4 class="label">Е-mail</h4>
-                <input class="textinput" type="email" name="mail">
-                <h4 class="label">Номер телефона</h4>
-                <input class="textinput tel" type="text" name="tel">
-                <h4 class="label">Пароль</h4>
-                <input class="textinput" type="password" name="password">
-                <h4 class="label">Подтверждение пароля</h4>
-                <input class="textinput" type="password" name="password_confirm">
-                <h4 class="label">Фамилия</h4>
-                <input class="textinput" type="text" name="password">
-                <h4 class="label">Имя</h4>
-                <input class="textinput" type="text" name="password_confirm">
-                <h4 class="label">Адрес</h4>
-                <input class="textinput" type="text" name="address">
-                
-                <br>
-                <div class="buttons">
-                    <input class="auth__btn" type="submit" value="Зарегистрироваться">
-                    <button type="button" class="auth__btn switch">Вход</button>
-                </div>
-            </form>
+        <div class="notifivationpart">
+            <div class="notification">
+                <h3 class="notification__header">Ошибка!</h3>
+                <p class="notification__text"></p>
+            </div>
         </div>
     </main>
     
