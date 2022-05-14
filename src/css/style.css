@@ -352,6 +352,7 @@ body{
 }
 .profile__inner{
     width: 500px;
+    margin: 0 auto;
 }
 .profile__inner__header{
     background-color: #262626;

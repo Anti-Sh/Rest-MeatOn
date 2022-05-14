@@ -22,7 +22,7 @@
     <main class="profile__outer">
         <div class="profile__inner">
             <h3 class="profile__inner__header">Персональная информация</h3>
-            <table class="pers__data">
+            <table class="pers__data orders">
                 <tr class="pers__data__row">
                     <td class="pers__data__col1">E-mail</td>
                     <td class="pers__data__col2"><?=$_SESSION['user']['mail']?></td>
