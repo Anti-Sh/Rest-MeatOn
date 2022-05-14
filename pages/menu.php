@@ -9,16 +9,16 @@
     <title>MeatOn | Меню</title>
 </head>
 <body>
-    <?php require "../page_modules/header.php"; ?>
-    <?php
-        $conn = mysqli_connect("localhost", "root", "", "meaton") or exit("Ошибка подключения".mysqli_error($conn));
+    <?php 
+        require "../page_modules/header.php"; 
+        require_once "../core/connect.php";
     ?>
     <main class="pmenu">
         <h3 class="main__header">Мясные блюда</h3>
         <section class="pmenu__section">
             <?php 
                 $query1 = "SELECT * FROM `menu_sections`";
-                $results1 = mysqli_query($conn, $query1);
+                $results1 = mysqli_query($connect, $query1);
                 while( $section = mysqli_fetch_array($results1)){
                     echo '<div class="pmenu__section__item">
                             <div class="pmenu__s__i__image">
@@ -28,7 +28,7 @@
                             <h3 class="description__header">'.$section[1].'</h3>';
                     
                     $query2 = "SELECT * FROM `menu_dishes` WHERE `menu_section`='$section[0]'";
-                    $results2 = mysqli_query($conn, $query2);
+                    $results2 = mysqli_query($connect, $query2);
                     echo '<table class="item__variants__table">
                             <tr>
                                 <td class="variant__name tr__name">Вид</td>
@@ -50,6 +50,6 @@
             ?>
         </section>
     </main>
-    <script src="src/js/script.js"></script>
+    <script src="../src/js/script.js"></script>
 </body>
 </html>

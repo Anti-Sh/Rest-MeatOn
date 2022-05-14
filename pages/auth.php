@@ -1,3 +1,11 @@
+<?php 
+    session_start(); 
+    if ($_SESSION["user"]){
+        header('Location: /pages/profile.php');
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -15,7 +23,7 @@
         <div class="formpart">
             <div class="auth">
                 <h2 class="auth__header">Авторизация</h2>
-                <form action="" method="post">
+                <form>
                     <h4 class="label">Е-mail</h4>
                     <input class="textinput" type="email" name="mail1">
                     <h4 class="label">Пароль</h4>

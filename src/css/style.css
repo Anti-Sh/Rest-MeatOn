@@ -155,6 +155,7 @@ body{
     font-weight: 600;
     font-size: 26px;
     width: 100%;
+    color: #fff;
     text-align: center;
 }
 .pmenu__section{
@@ -330,4 +331,85 @@ body{
 .buttons{
     border-top: 2px solid #e1b838;
     padding-bottom: 2px;
+}
+
+/*profile page*/
+.profile__outer{
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.prof{
+    margin-bottom: 0;
+}
+.profile__inner{
+    width: 500px;
+}
+.profile__inner__header{
+    background-color: #262626;
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+}
+.pers__data{
+    border: 4px solid #e1b838;
+    border-collapse: collapse;
+}
+.pers__data__col1{
+    font-weight: 600;
+    color: #262626;
+    padding: 5px;
+    border: 2px solid #262626;
+    background-color: #e1b838;
+}
+.pers__data__col2{
+    padding: 5px;
+    border: 2px solid #e1b838;
+}
+.text{
+    font-size: 16px;
+    color: #e1b838;
+    margin: 0 auto;
+}
+.orders__notif{
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+}
+.orders{
+    width: 100%;
+}
+.orders__col1{
+    width: 20%;
+}
+.orders__col2{
+    width: 50%;
+}
+.orders__col3{
+    width: 30%;
+}
+.leaveBtn{
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    width: 20%;
+    padding: 5px;
+    border: 2px solid #e1b838;
+    color: #e1b838;
+    background-color: #262626;
+    text-decoration: none;
+    margin: 5px auto 0;
+    transition: all 0.5s;
+}
+.leaveBtn:hover{
+    color: #262626;
+    background-color: #e1b838;
 }
