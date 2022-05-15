@@ -504,3 +504,42 @@ body{
     color: #262626;
     transition: all .2s ease-in-out;
 }
+.date{
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    margin: 15px auto 10px;
+    background-color: #262626;
+    font-size: 16px;
+    color: #e1b838;
+    border: 2px solid #e1b838;
+    width: 200px;
+    height: 30px;
+}
+.warning__text{
+    display: block;
+    text-align: center;
+    width: 400px;
+    margin: 0 auto 15px;
+    font-size: 13px;
+}
+.warning__header{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 15px;
+    color: #e1b838;
+}
+.form__order{
+    width: 400px;
+    margin: 0 auto;
+    display: block;
+}
+#make__order{
+    width: 200px;
+}
+.except{
+    border-color: #e14338;
+    color: #e14338;
+}
+.error__header{
+    color: #e14338;
+}

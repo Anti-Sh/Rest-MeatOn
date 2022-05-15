@@ -2,8 +2,18 @@
     session_start(); 
     if (!$_SESSION["user"]){
         header('Location: /pages/auth.php');
+    };
+    require_once "../core/connect.php";
+    $num_in_cart = 0;
+    $pr_in_cart = [];
+    if ($_SESSION["cart"]){
+        foreach($_SESSION["cart"] as $dish){
+            if ($dish["count"] > 0){
+                $num_in_cart++;
+                $pr_in_cart[] = $dish;
+            }
+        }
     }
-    require_once "../core/connect.php"
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -29,45 +39,40 @@
         </select>
         <button class="leaveBtn page__order__btn" id="add__dish" type="submit">Добавить</button>
     </main>
-    <h3 class="main__header prof">Заказ</h3>
+    <? if ($num_in_cart > 0): ?>
     <main class="order">
+        <h3 class="main__header prof">Заказ</h3>
+        <? foreach ($pr_in_cart as $item):?>
         <div class="order__inner">
-            <button type="button" value="0" class="order__button delete__dish">&#8211;</button>
-            <span class="order__text">Капуста брокколи жаренная</span>
+            <button type="button" value="<?=$item["id"]?>" class="order__button delete__dish">&#8211;</button>
+            <span class="order__text"><?=$item["name"]?></span>
             <div class="count">
-                <button type="button" value="0" class="order__button count__btn count__minus">-</button>
-                <span class="count__num">1</span>
-                <button type="button" value="0" class="order__button count__btn count__plus">+</button>
+                <button type="button" value="<?=$item["id"]?>" class="order__button count__btn count__minus">-</button>
+                <span class="count__num"><?=$item["count"]?></span>
+                <button type="button" value="<?=$item["id"]?>" class="order__button count__btn count__plus">+</button>
             </div>
-            <span class="cost">480</span>
-            <span class="price">480</span>
+            <span class="cost"><?=$item["cost"]?></span>
+            <span class="price"><?=$item["price"]?></span>
         </div>
-        <div class="order__inner">
-            <button type="button" value="1" class="order__button delete__dish">&#8211;</button>
-            <span class="order__text">Курица под белым соусом</span>
-            <div class="count">
-                <button value="1" type="button" class="order__button count__btn count__minus">-</button>
-                <span class="count__num">1</span>
-                <button value="1" type="button" class="order__button count__btn count__plus">+</button>
+        <? endforeach; ?>
+        <form action="" class="form__order">
+            <div class="delieve__date">
+                <input class="date" type="datetime-local" name="dateto"
+                min="<?= date('Y-m-d\TH:i', mktime(date("H")+6, date("i"), 0, date("m"), date("d"), date("Y"))) ?>" 
+                max="<?= date('Y-m-d\TH:i', mktime(date("H")+6, date("i"), 0, date("m"), date("d")+5, date("Y"))) ?>">
             </div>
-            <span class="cost">560</span>
-            <span class="price">560</span>
-        </div>
-        </div>
-        <div class="order__inner">
-            <button type="button" value="2" class="order__button delete__dish">&#8211;</button>
-            <span class="order__text">Стейк из Мраморной Говядины</span>
-            <div class="count">
-                <button value="2" type="button" class="order__button count__btn count__minus">-</button>
-                <span class="count__num">1</span>
-                <button value="2" type="button" class="order__button count__btn count__plus">+</button>
+            <div class="error__div">
+                <h4 class="warning__header error__header">Ошибка!</h4>
+                <span class="error__text warning__text"></span>
             </div>
-            <span class="cost">1056</span>
-            <span class="price">1056</span>
-        </div>
-        <button class="leaveBtn page__order__btn" type="submit">Сделать заказ</button>
+            <h4 class="warning__header">Внимание!</h4>
+            <span class="warning__text">
+                Время доставки указается ориентировочно. После оформления заказа с вами свяжется менеджер для согласования деталей. <br> Оплата при получении!
+            </span>
+            <button class="leaveBtn page__order__btn" id="make__order" type="submit">Сделать заказ</button>
+        </form>
     </main>
-    
+    <? endif; ?>
     <script src="../src/js/cartpage.js"></script>
 </body>
 </html>

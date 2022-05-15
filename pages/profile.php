@@ -66,12 +66,12 @@
                 <?php 
                     }
                     else {
-                        while( $sql = mysqli_fetch_assoc($orders) && $count <= 10){
+                        while( ($sql = mysqli_fetch_array($orders)) && $count <= 10){
                 ?>
                 <tr>
-                    <td class="orders__col1 pers__data__col2"> <?=$sql["id"]?> </td>
-                    <td class="orders__col2 pers__data__col2"> <?=$sql["delivery_timestamp"]?> </td>
-                    <td class="orders__col3 pers__data__col2"> <?=$sql["completion"] == 1 ? "Выполнен" : "Готовится"?> </td>
+                    <td class="orders__col1 pers__data__col2"> <?= (int) $sql[0] ?> </td>
+                    <td class="orders__col2 pers__data__col2"> <?=  date('Y-m-d  H:i', (int) $sql[2]) ?> </td>
+                    <td class="orders__col3 pers__data__col2"> <?= $sql[3] == 1 ? "Выполнен" : "Готовится"?> </td>
                 </tr>
                 <?php
                             $count++;
