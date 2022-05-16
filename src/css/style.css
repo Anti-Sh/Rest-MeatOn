@@ -20,8 +20,9 @@ body{
     justify-items: center;
     justify-content: space-between;
 }
-.logo{
-    width: 220px;
+.logo img{
+    width: 250px;
+
 }
 .menu{
     display: flex;
@@ -542,4 +543,58 @@ body{
 }
 .error__header{
     color: #e14338;
+}
+
+/*about*/
+.about__page{
+    font-family: 'Montserrat', sans-serif;
+    background: url('../img/about1.png') no-repeat;
+    background-size: cover;
+    background-position: right;
+    color: #fff;
+    width: 100%;
+    max-width: 1440px;
+    height: 1115px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: row ;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.ap2{
+    background: url('../img/about2.png') no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 1020px;
+    margin-top: 0;
+    justify-content: flex-end;
+    align-items: center;
+}
+.context{
+    text-align: center;
+    height: auto;
+    border: 2px solid #e1b838;
+}
+.about__header{
+    color: #262626;
+    margin: 0;
+    padding: 25px 0;
+    background-color: #e1b838;
+    font-size: 25px;
+}
+.about__p{
+    background-color: #262626;
+    padding: 10px;
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+}
+#ctx1{
+    width: 450px;
+    margin: 5% 0px 0 15%;
+    height: auto;
+}
+#ctx2{
+    width: 450px;
+    margin: 0 10% 0% 0;
 }

@@ -1,6 +1,6 @@
 <header class="header">
     <div class="logo">
-        <img class="logo__img" src="../src/img/logo.svg">
+        <img class="logo__img" src="../src/img/logo.png">
     </div>
     <nav class="menu">
         <div class="menu__inner push">

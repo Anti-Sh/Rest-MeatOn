@@ -30,12 +30,23 @@ if (!empty($error_fields)) {
     echo json_encode($response); // Отправка JSON на страницу
     die(); // Прекращение выполнения кода
 }
-
-if ($password !== $password_confirm){
+if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
+    $error_fields[] = 'mail';
     $response = [ // Создание JSON
         "status" => false,
         "type" => 1,
-        "message" => "Заполните выделенные поля и попробуйте снова",
+        "message" => "Укажите существующую почту!",
+        "fields" => $error_fields
+    ];
+    echo json_encode($response); // Отправка JSON на страницу
+    die(); // Прекращение выполнения кода
+}
+if ($password !== $password_confirm){
+    $error_fields[] = 'password';
+    $response = [ // Создание JSON
+        "status" => false,
+        "type" => 1,
+        "message" => "Пароли не совпадают!",
         "fields" => $error_fields
     ];
     echo json_encode($response); // Отправка JSON на страницу

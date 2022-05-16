@@ -45,9 +45,9 @@
                     <input class="textinput" type="password" name="password">
                     <h4 class="label">Подтверждение пароля</h4>
                     <input class="textinput" type="password" name="password_confirm">
-                    <h4 class="label">Фамилия</h4>
-                    <input class="textinput" type="text" name="last_name">
                     <h4 class="label">Имя</h4>
+                    <input class="textinput" type="text" name="last_name">
+                    <h4 class="label">Фамилия</h4>
                     <input class="textinput" type="text" name="first_name">
                     <h4 class="label">Адрес</h4>
                     <input class="textinput" type="text" name="address">
