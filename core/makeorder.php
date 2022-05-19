@@ -27,10 +27,10 @@ if ($date_left > $date_input || $date_right < $date_input){
 }
 
 $timestamp_input = mktime($dt_input[3], $dt_input[4], 0, $dt_input[1], $dt_input[2], $dt_input[0]);
-
+$timestamp_now = time() + 4*60*60;
 
 $user_id = $_SESSION["user"]["id"];
-$query = "INSERT INTO `orders`(`id`, `customer`, `delivery_timestamp`, `completion`) VALUES (NULL, '$user_id','$timestamp_input','0')"; 
+$query = "INSERT INTO `orders`(`id`, `customer`, `delivery_timestamp`, `order_timestamp`, `completion`) VALUES (NULL, '$user_id','$timestamp_input','$timestamp_now','0')"; 
 mysqli_query($connect, $query) or $msg = mysqli_error($connect);
 $order_id = mysqli_insert_id($connect);
 foreach($_SESSION["cart"] as $dish){
