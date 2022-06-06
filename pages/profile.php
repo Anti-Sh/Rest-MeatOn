@@ -69,9 +69,15 @@
                         while( ($sql = mysqli_fetch_array($orders)) && $count <= 10){
                 ?>
                 <tr>
+                    <?
+                        $status = "Готовится";
+                        if($sql[4] == 1){
+                            $status = "Выполнен";
+                        }
+                    ?>
                     <td class="orders__col1 pers__data__col2"> <?= (int) $sql[0] ?> </td>
                     <td class="orders__col2 pers__data__col2"> <?=  date('Y-m-d  H:i', (int) $sql[2]) ?> </td>
-                    <td class="orders__col3 pers__data__col2"> <?= $sql[3] == 1 ? "Выполнен" : "Готовится"?> </td>
+                    <td class="orders__col3 pers__data__col2"> <?=  $status ?> </td>
                 </tr>
                 <?php
                             $count++;

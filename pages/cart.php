@@ -1,16 +1,16 @@
 <?php 
-    session_start(); 
-    if (!$_SESSION["user"]){
-        header('Location: /pages/auth.php');
+    session_start(); // Начало сессии
+    if (!$_SESSION["user"]){ // Проверка на авторизированность
+        header('Location: /pages/auth.php'); // Редирект на страницу авторизации, если не авторизирован
     };
-    require_once "../core/connect.php";
-    $num_in_cart = 0;
-    $pr_in_cart = [];
-    if ($_SESSION["cart"]){
-        foreach($_SESSION["cart"] as $dish){
-            if ($dish["count"] > 0){
-                $num_in_cart++;
-                $pr_in_cart[] = $dish;
+    require_once "../core/connect.php"; // Подключение к БД
+    $num_in_cart = 0; // Количество продуктов в корзине
+    $pr_in_cart = []; // Массив продуктов в корзине
+    if ($_SESSION["cart"]){ // Проверка на наличие переменной в сессии
+        foreach($_SESSION["cart"] as $dish){ // Для каждого блюда
+            if ($dish["count"] > 0){ // Если блюдо добавлено в корзину
+                $num_in_cart++; // количество блюд увеличивается
+                $pr_in_cart[] = $dish; // блюдо добавляется в массив
             }
         }
     }
@@ -42,7 +42,7 @@
     <? if ($num_in_cart > 0): ?>
     <main class="order">
         <h3 class="main__header prof">Заказ</h3>
-        <? foreach ($pr_in_cart as $item):?>
+        <? foreach ($pr_in_cart as $item): // создание ?>
         <div class="order__inner">
             <button type="button" value="<?=$item["id"]?>" class="order__button delete__dish">&#8211;</button>
             <span class="order__text"><?=$item["name"]?></span>

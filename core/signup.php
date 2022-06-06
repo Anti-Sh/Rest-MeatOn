@@ -20,7 +20,7 @@ if ($firstName === '') $error_fields[] = 'first_name'; // Проверка по�
 if ($lastName === '') $error_fields[] = 'last_name'; // Проверка полей на пустоту
 if ($address === '') $error_fields[] = 'address'; // Проверка полей на пустоту
 
-if (!empty($error_fields)) {
+if (!empty($error_fields)) { // Проверка на наличие пустых полей
     $response = [ // Создание JSON
         "status" => false,
         "type" => 1,
@@ -30,8 +30,8 @@ if (!empty($error_fields)) {
     echo json_encode($response); // Отправка JSON на страницу
     die(); // Прекращение выполнения кода
 }
-if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
-    $error_fields[] = 'mail';
+if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){ // Проверка почты на валидность
+    $error_fields[] = 'mail'; 
     $response = [ // Создание JSON
         "status" => false,
         "type" => 1,
